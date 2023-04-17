@@ -17,5 +17,6 @@ app.use('/api/products/headphones', headphonesRoute);
 app.use('/api/auth', userRoute);
 app.use('/api/manufacturer', marqueRoute);
 
-app.listen(3000, () => console.log("app is listening on port" + 3000))
+const PORT = process.env.port || 3000;
+app.listen(PORT, () => console.log(`app is listening on port" + ${PORT}`))
 module.exports = app;
